@@ -25,6 +25,16 @@ router.get('/fetchall', async(req, res) => {
 
 })
 
+router.post('/getTutorial', async(req, res) => {
+
+    try {
+        const data = await tutorial.singleTutorial(req.body)
+        res.status(200).send(data)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+
+})
 
 
 module.exports = router

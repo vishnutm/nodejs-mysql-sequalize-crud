@@ -2,5 +2,6 @@ module.exports = {
 
 
     ...require('./createTutorials'),
-    ...require('./getAllTutorials')
+    ...require('./getAllTutorials'),
+    ...require('./singleTutorial')
 }
