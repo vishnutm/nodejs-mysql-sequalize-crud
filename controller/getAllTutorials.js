@@ -1,21 +1,18 @@
 
 const models = require('../models/index')
-const {Op} = require('sequelize')
+const { Op } = require('sequelize')
 
-const getAlltutorials = async (req) => {
+const getAlltutorials = async () => {
 
-    
+    try {
 
-    
-        try {
-            
-            const getAlldata = await models.Tutorial.findAll()
+        const getAlldata = await models.Tutorial.findAll()
 
-            return getAlldata
-        }
-         catch (error) {
-            throw error
-        }
+        return getAlldata
+    }
+    catch (error) {
+        throw error
+    }
 
 }
 

@@ -17,7 +17,7 @@ router.post('/create', async(req, res) => {
 router.get('/fetchall', async(req, res) => {
 
     try {
-        const data = await tutorial.getAlltutorials(req.body)
+        const data = await tutorial.getAlltutorials()
         res.status(200).send(data)
     } catch (error) {
         res.status(500).send(error)
