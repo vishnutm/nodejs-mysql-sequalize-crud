@@ -1,6 +1,4 @@
-const dotenv = require('dotenv');
-dotenv.config({path:require('find-config')('.env')});
-console.log(process.env);
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
