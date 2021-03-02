@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const tutorial = require('../controller/index')
 
-
+// router for creating new tutorial
 router.post('/create', async(req, res) => {
 
     try {
@@ -13,7 +13,7 @@ router.post('/create', async(req, res) => {
     }
 
 })
-
+// router for fetching all data 
 router.get('/fetchall', async(req, res) => {
 
     try {
@@ -24,7 +24,7 @@ router.get('/fetchall', async(req, res) => {
     }
 
 })
-
+// router for get a single tutroial details
 router.post('/getTutorial', async(req, res) => {
 
     try {
@@ -35,7 +35,7 @@ router.post('/getTutorial', async(req, res) => {
     }
 
 })
-
+// update tutorial based on the id
 router.put('/update', async(req, res) => {
 
     try {
