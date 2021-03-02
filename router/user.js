@@ -36,5 +36,17 @@ router.post('/getTutorial', async(req, res) => {
 
 })
 
+router.put('/update', async(req, res) => {
+
+    try {
+        const data = await tutorial.updateTutorial(req.body)
+        console.log(req.body);
+        res.status(200).send(data)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+
+})
+
 
 module.exports = router
